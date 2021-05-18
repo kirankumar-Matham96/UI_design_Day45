@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/add_employee_payroll.css" />
-    <title>THIS Employee Payroll Form</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/add_employee_payroll.css" />
+  <title>Employee Payroll Form</title>
+</head>
+
   <body>
     <!-- UC1 -->
     <header class="headrer-content header">
       <div class="logo-content">
         <img src="../assets/images/logo.png" alt="logo" />
         <div>
-          <span class="emp-text">EMPLOYEE</span>
+          <span class="emp-text">EMPLOYEE</span><br />
           <span class="emp-text emp-payroll">PAYROLL</span>
         </div>
       </div>
@@ -23,73 +25,26 @@
         <!-- UC 2 -->
         <div class="row-content">
           <label for="name" class="label text">Name</label>
-          <input
-            type="text"
-            class="input"
-            id="name"
-            name="name"
-            placeholder="your name.."
-            required
-          />
+          <input type="text" class="input" id="name" name="name" placeholder="your name.." required />
           <error-output class="name-error" for="name"></error-output>
         </div>
         <div class="row-content">
           <label class="label text" for="profile">Profile</label>
           <div class="profile-radio-content">
-            <input
-              type="radio"
-              id="profile1"
-              name="profile"
-              value="../assets/profile-images/Ellipse -3.png"
-              required
-            />
-            <img
-              class="profile"
-              id="image1"
-              src="../assets/profile-images/Ellipse -3.png"
-            />
+            <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png" required />
+            <img class="profile" id="image1" src="../assets/profile-images/Ellipse -3.png" />
           </div>
           <label class="profile-radio-content">
-            <input
-              type="radio"
-              id="profile2"
-              name="profile"
-              value="../assets/profile-images/Ellipse -1.png"
-              required
-            />
-            <img
-              class="profile"
-              id="image2"
-              src="../assets/profile-images/Ellipse -1.png"
-            />
+            <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse -1.png" required />
+            <img class="profile" id="image2" src="../assets/profile-images/Ellipse -1.png" />
           </label>
           <label class="profile-radio-content">
-            <input
-              type="radio"
-              id="profile3"
-              name="profile"
-              value="../assets/profile-images/Ellipse -8.png"
-              required
-            />
-            <img
-              class="profile"
-              id="image3"
-              src="../assets/profile-images/Ellipse -8.png"
-            />
+            <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -8.png" required />
+            <img class="profile" id="image3" src="../assets/profile-images/Ellipse -8.png" />
           </label>
           <label class="profile-radio-content">
-            <input
-              type="radio"
-              id="profile4"
-              name="profile"
-              value="../assets/profile-images/Ellipse -7.png"
-              required
-            />
-            <img
-              class="profile"
-              id="image4"
-              src="../assets/profile-images/Ellipse -7.png"
-            />
+            <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png" required />
+            <img class="profile" id="image4" src="../assets/profile-images/Ellipse -7.png" />
           </label>
         </div>
         <div class="row-content">
@@ -104,60 +59,22 @@
         <div class="row-content">
           <label class="label text" for="department">Department</label>
           <div>
-            <input
-              class="checkbox"
-              type="checkbox"
-              id="hr"
-              name="hr"
-              value="Hr"
-            />
+            <input class="checkbox" type="checkbox" id="hr" name="hr" value="Hr" />
             <label class="text" for="hr">HR</label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              id="sales"
-              name="sales"
-              value="Sales"
-            />
+            <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales" />
             <label class="text" for="sales">Sales</label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              id="finance"
-              name="finance"
-              value="Finance"
-            />
+            <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance" />
             <label class="text" for="finance">Finance</label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              id="engineer"
-              name="engineer"
-              value="Engineer"
-            />
+            <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer" />
             <label class="text" for="engineer">Engineer</label>
-            <input
-              class="checkbox"
-              type="checkbox"
-              id="others"
-              name="others"
-              value="Others"
-            />
+            <input class="checkbox" type="checkbox" id="others" name="others" value="Others" />
             <label class="text" for="others">Others</label>
           </div>
         </div>
         <div class="row-content">
           <label class="label text" for="salary">Choose your salary: </label>
-          <input
-            type="range"
-            class="input"
-            name="salary"
-            id="salary"
-            min="300000"
-            max="500000"
-            step="100"
-            value="400000"
-          />
+          <input type="range" class="input" name="salary" id="salary" min="300000" max="500000" step="100"
+            value="400000" />
           <output class="salary-output-text" id="salary-output" for="salary">400000</output>
         </div>
         <div class="row-content">
@@ -222,19 +139,11 @@
         </div>
         <div class="row-content">
           <label class="label text" for="notes">Notes: </label>
-          <textarea
-            id="notes"
-            class="input"
-            name="Notes"
-            placeholder="write something.."
-            style="height: 100px"
-          ></textarea>
+          <textarea id="notes" class="input" name="Notes" placeholder="write something.."
+          style="height: 100px"></textarea>
         </div>
         <div class="button-parent">
-          <a href="./home.html" class="resetButton button cancelButton"
-            >Cancel</a
-          >
-
+          <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
           <div class="submit-reset">
             <button type="submit" class="button submitButton" id="submitButton">
               Submit
@@ -247,4 +156,5 @@
     <!-- adding javascript file -->
     <script defer src="../js/event_listener_for_payroll.js"></script>
   </body>
+  
 </html>

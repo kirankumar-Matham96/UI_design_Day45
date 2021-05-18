@@ -8,7 +8,11 @@ class EmployeePayrollData {
   startDate;
   note;
 
-  EmployeePayrollData(...params) {
+  /**
+   * constructor for the class
+   * @param  {...any} params
+   */
+  constructor /*EmployeePayrollData*/(...params) {
     this.id = params[0];
     this.name = params[1];
     this.profilePic = params[2];
@@ -119,10 +123,14 @@ class EmployeePayrollData {
   }
 
   toString() {
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    const empDate = !this._startDate
-      ? "undefined"
-      : this._startDate.toLocaleDateString("en-US", options);
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    };
+    const empDate = !this._startDate ?
+      "undefined" :
+      this._startDate.toLocaleDateString("en-US", options);
     return (
       "id=" +
       this._id +

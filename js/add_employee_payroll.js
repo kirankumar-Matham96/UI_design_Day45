@@ -1,37 +1,25 @@
 class EmployeePayrollData {
-  id;
-  name;
-  profilePic;
-  gender;
-  department;
-  salary;
-  startDate;
-  note;
+  // id;
+  // name;
+  // profilePic;
+  // gender;
+  // department;
+  // salary;
+  // startDate;
+  // note;
 
   /**
    * constructor for the class
    * @param  {...any} params
    */
   constructor /*EmployeePayrollData*/(...params) {
-    this.id = params[0];
-    this.name = params[1];
-    this.profilePic = params[2];
-    this.gender = params[3];
-    this.department = params[4];
-    this.salary = params[5];
-    this.startDate = params[6];
-    this.note = params[7];
-  }
-
-  get id() {
-    return this._id;
-  }
-
-  /**
-   * @param {any} id
-   */
-  set id(id) {
-    this._id = id;
+    this.name = params[0];
+    this.profilePic = params[1];
+    this.gender = params[2];
+    this.department = params[3];
+    this.salary = params[4];
+    this.startDate = params[5];
+    this.note = params[6];
   }
 
   get name() {
@@ -76,9 +64,6 @@ class EmployeePayrollData {
     return this._department;
   }
 
-  /**
-   * @param {any} department
-   */
   set department(department) {
     this._department = department;
   }
@@ -126,11 +111,11 @@ class EmployeePayrollData {
     const options = {
       year: "numeric",
       month: "long",
-      day: "numeric"
+      day: "numeric",
     };
-    const empDate = !this._startDate ?
-      "undefined" :
-      this._startDate.toLocaleDateString("en-US", options);
+    const empDate = !this._startDate
+      ? "undefined"
+      : this._startDate.toLocaleDateString("en-US", options);
     return (
       "id=" +
       this._id +

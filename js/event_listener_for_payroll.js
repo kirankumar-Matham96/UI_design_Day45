@@ -5,14 +5,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     if (name.value.length === 0) {
       nameError.textContent = "";
       return;
-    } else {
-      try {
-        const nameInstance = new EmployeePayrollData();
-        nameInstance.name = name.value;
-        nameError.textContent = "";
-      } catch (e) {
-        nameError.textContent = e;
-      }
+    }
+    try {
+      const nameInstance = new EmployeePayrollData();
+      nameInstance.name = name.value;
+      nameError.textContent = "";
+    } catch (e) {
+      nameError.textContent = e;
     }
   });
 
@@ -65,14 +64,21 @@ const createEmployeePayroll = () => {
   employeePayrollData.note = getInputValueById("#notes");
   let date =
     getInputValueById("#day") +
-    "" +
+    "-" +
     getInputValueById("#month") +
-    "" +
+    "-" +
     getInputValueById("#year");
-  employeePayrollData.date = Date.parse(date);
+  employeePayrollData.date = new Date(date);
+
   alert(employeePayrollData.toString());
   return employeePayrollData;
 };
+
+// const getOption = (id) => {
+//   var e = document.getElementById(id);
+//   var strUser = e.options[e.selectedIndex].text;
+//   return strUser;
+// };
 
 /**
  * gets the values of all the selected elements
@@ -115,7 +121,7 @@ const resetForm = () => {
   setValue("#day", "1");
   setValue("#month", "Jan");
   setValue("#year", "2016");
-  setTextValue("#salary-output", "400000"); //not working!
+  setTextValue(".salary-output", "400000");
 };
 
 const unsetSelectedValues = (propertyValue) => {
@@ -125,13 +131,12 @@ const unsetSelectedValues = (propertyValue) => {
   });
 };
 
-const setTextValues = (id, value) => {
-  //not used anywhere!
+const setTextValue = (id, value) => {
   const element = document.querySelector(id);
-  element.textContenet = value;
+  element.value = value;
 };
 
 const setValue = (id, value) => {
   const element = document.querySelector(id);
-  element.textContenet = value;
+  element.value = value;
 };

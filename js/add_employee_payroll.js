@@ -12,14 +12,23 @@ class EmployeePayrollData {
    * constructor for the class
    * @param  {...any} params
    */
-  constructor /*EmployeePayrollData*/(...params) {
-    this.name = params[0];
-    this.profilePic = params[1];
-    this.gender = params[2];
-    this.department = params[3];
-    this.salary = params[4];
-    this.startDate = params[5];
-    this.note = params[6];
+  /*constructor*/
+  // EmployeePayrollData(...params) {
+  //   this.name = params[0];
+  //   this.profilePic = params[1];
+  //   this.gender = params[2];
+  //   this.department = params[3];
+  //   this.salary = params[4];
+  //   this.startDate = params[5];
+  //   this.note = params[6];
+  // }
+
+  get id() {
+    return this._id;
+  }
+
+  set id(id) {
+    thid._id = id;
   }
 
   get name() {
@@ -64,6 +73,9 @@ class EmployeePayrollData {
     return this._department;
   }
 
+  /**
+   * @param {any} department
+   */
   set department(department) {
     this._department = department;
   }
@@ -88,10 +100,10 @@ class EmployeePayrollData {
    */
   set startDate(startDate) {
     //need to add date range condition
-    let currentDate = new Date();
-    let systemDay = currentDate.getDay();
-    let systemMonth = currentDate.getMonth();
-    let systemYear = currentDate.getFullYear();
+    // let currentDate = new Date();
+    // let systemDay = currentDate.getDay();
+    // let systemMonth = currentDate.getMonth();
+    // let systemYear = currentDate.getFullYear();
 
     this._startDate = startDate;
   }
@@ -119,7 +131,7 @@ class EmployeePayrollData {
     return (
       "id=" +
       this._id +
-      ", name=" +
+      "name=" +
       this._name +
       ", gender=" +
       this._gender +

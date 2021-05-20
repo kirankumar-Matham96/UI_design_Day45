@@ -1,28 +1,5 @@
 class EmployeePayrollData {
-  // id;
-  // name;
-  // profilePic;
-  // gender;
-  // department;
-  // salary;
-  // startDate;
-  // note;
-
-  /**
-   * constructor for the class
-   * @param  {...any} params
-   */
-  /*constructor*/
-  // EmployeePayrollData(...params) {
-  //   this.name = params[0];
-  //   this.profilePic = params[1];
-  //   this.gender = params[2];
-  //   this.department = params[3];
-  //   this.salary = params[4];
-  //   this.startDate = params[5];
-  //   this.note = params[6];
-  // }
-
+  //getters and setters
   get id() {
     return this._id;
   }
